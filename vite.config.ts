@@ -5,6 +5,11 @@ import react from "@vitejs/plugin-react-swc";
 export default defineConfig({
   base: "/mui-pad-hmi/",
   plugins: [react()],
+  resolve: {
+    alias: {
+      "@": "/src",
+    },
+  },
   optimizeDeps: {
     include: ["react/jsx-runtime"],
   },

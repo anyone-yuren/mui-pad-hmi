@@ -21,7 +21,7 @@ export default function MiniDrawer() {
   const { active, dialogOpen, activeApp } = useGlobaltore((state) => state);
   const Component = React.useMemo(() => {
     if (!activeApp) return null;
-    return React.lazy(() => import(`./components/Pages/${activeApp}`));
+    return React.lazy(() => import(`@/components/Pages/${activeApp}`));
   }, [activeApp]);
   return (
     <Paper

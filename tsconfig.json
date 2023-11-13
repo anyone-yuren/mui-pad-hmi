@@ -15,7 +15,11 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@@/*": ["./src/.vit/*"]
+    }
   },
   "include": ["src", "./.eslintrc.cjs"],
   "references": [
