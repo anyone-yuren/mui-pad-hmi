@@ -11,9 +11,6 @@ dependencies:
   '@emotion/styled':
     specifier: ^11.11.0
     version: 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.15)(react@18.2.0)
-  '@fontsource/roboto':
-    specifier: ^5.0.8
-    version: 5.0.8
   '@mui/icons-material':
     specifier: ^5.14.7
     version: 5.14.7(@mui/material@5.14.7)(@types/react@18.2.15)(react@18.2.0)
@@ -37,9 +34,6 @@ dependencies:
     version: 4.4.1(@types/react@18.2.15)(react@18.2.0)
 
 devDependencies:
-  '@types/canvas-confetti':
-    specifier: ^1.6.1
-    version: 1.6.1
   '@types/react':
     specifier: ^18.2.15
     version: 18.2.15
@@ -510,10 +504,6 @@ packages:
     resolution: {integrity: sha512-m0G6wlnhm/AX0H12IOWtK8gASEMffnX08RtKkCgTdHb9JpHKGloI7icFfLg9ZmQeavcvR0PKmzxClyuFPSjKWw==}
     dev: false
 
-  /@fontsource/roboto@5.0.8:
-    resolution: {integrity: sha512-XxPltXs5R31D6UZeLIV1td3wTXU3jzd3f2DLsXI8tytMGBkIsGcc9sIyiupRtA8y73HAhuSCeweOoBqf6DbWCA==}
-    dev: false
-
   /@humanwhocodes/config-array@0.11.11:
     resolution: {integrity: sha512-N2brEuAadi0CcdeMXUkhbZB84eskAc8MEX1By6qEchoVywSgXPIjou4rYsl0V3Hj0ZnuGycGCjdNgockbzeWNA==}
     engines: {node: '>=10.10.0'}
@@ -899,10 +889,6 @@ packages:
 
   /@swc/types@0.1.4:
     resolution: {integrity: sha512-z/G02d+59gyyUb7KYhKi9jOhicek6QD2oMaotUyG+lUkybpXoV49dY9bj7Ah5Q+y7knK2jU67UTX9FyfGzaxQg==}
-    dev: true
-
-  /@types/canvas-confetti@1.6.1:
-    resolution: {integrity: sha512-wTSI/k/586KnzL8Inm0yXe/U9x0sO2tc4j/osIAZVsE+hyj2S/M+sdR5zDDLygEkohhlG948zNVBG5QiI4Z2mw==}
     dev: true
 
   /@types/json-schema@7.0.12:

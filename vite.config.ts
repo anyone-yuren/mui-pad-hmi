@@ -10,16 +10,6 @@ export default defineConfig({
       "@": "/src",
     },
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          "react-vendor": ["react", "react-dom", "react-router-dom"],
-        },
-      },
-    },
-    target: "es2015",
-  },
   optimizeDeps: {
     include: ["react/jsx-runtime"],
   },
