@@ -17,12 +17,28 @@ const SlideBox = styled(Box)(({ theme, open }) => ({
   width: "100%",
 }));
 
+const modules = import.meta.glob("./components/Pages/**/*.tsx");
+
 export default function MiniDrawer() {
   const { active, dialogOpen, activeApp } = useGlobaltore((state) => state);
+
   const Component = React.useMemo(() => {
     if (!activeApp) return null;
-    return React.lazy(() => import(`@/components/Pages/${activeApp}`));
-  }, [activeApp]);
+
+    // 获取动态导入的组件模块
+    const modulePath = `./components/Pages/${activeApp}/index.tsx`;
+    const module = modules[modulePath];
+
+    if (module) {
+      // 动态导入并返回 Promise
+      return React.lazy(
+        () => module() as Promise<{ default: React.ComponentType<any> }>
+      );
+    } else {
+      console.error(`Module not found for ${modulePath}`);
+      return null;
+    }
+  }, [activeApp, modules]);
   return (
     <Paper
       sx={{
