@@ -1,1 +1,0 @@
-import{j as e,y as r,z as t}from"./index-0032d6f0.js";import{G as i}from"./index-609e12de.js";import s from"./ConlectData-108759eb.js";import"./Button-3cf7431a.js";import"./useId-31a10a20.js";const m=()=>e.jsx(r,{slidesPerView:1,spaceBetween:20,children:e.jsx(t,{children:e.jsx(i,{delay:100,sx:{height:"100%",width:"100%"},children:e.jsx(s,{})})})});export{m as default};
