@@ -109,3 +109,113 @@ body {
   opacity: 1;
   border-radius: 8px;
 }
+
+/* 滚动条的样式优化 */
+::-webkit-scrollbar-track-piece {
+  -webkit-border-radius: 0;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  -webkit-border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  height: 0px;
+  background-color: transparent;
+  -webkit-border-radius: 6px;
+}
+.iGiEeo {
+  z-index: 1333 !important;
+}
+
+* {
+  font-family: Microsoft YaHei;
+}
+.ant-picker .ant-picker-input > input {
+  color: #fff;
+}
+.anticon {
+  color: #fff;
+}
+.ant-upload-list-item {
+  color: #fff;
+  font-size: 18px;
+}
+
+.ant-upload-list-item .ant-upload-icon .anticon {
+  color: #fff;
+  font-size: 18px;
+}
+.ant-upload-list-item-actions .anticon {
+  color: #fff;
+  font-size: 18px;
+}
+.number {
+  font-family: DIN;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0em;
+
+  color: #ffffff;
+}
+.numberLable {
+  opacity: 0.5;
+  margin-top: 12px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: Microsoft YaHei;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: 0em;
+
+  color: #ffffff;
+}
+.numberInput {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  background: rgba(216, 216, 216, 0.2);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 15px 0 14px;
+}
+.SwitchDiv {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 25px;
+  justify-content: space-between;
+}
+.SwitchDiv .MuiSwitch-root {
+  width: 110px;
+  height: 45px;
+  padding: 0;
+}
+.SwitchDiv .MuiButtonBase-root {
+  padding: 3px;
+  color: #ffffff;
+}
+.SwitchDiv .MuiSwitch-thumb {
+  width: 39px;
+  height: 39px;
+  border-radius: 5px;
+  opacity: 1;
+}
+.SwitchLable {
+  opacity: 0.5;
+}
+.SwitchDiv .Mui-checked {
+  transform: translateX(65px) !important; //110 -39-6
+}
+.SwitchDiv .MuiSwitch-track {
+  background-color: #d8d8d8 !important;
+  opacity: 0.5 !important;
+}

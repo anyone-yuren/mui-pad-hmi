@@ -5,23 +5,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import GlobalPanel from "../../GlobalPanel";
+import ConlectData from "./components/ConlectData";
 
 const Settings = () => {
   return (
-    <Swiper slidesPerView={3} spaceBetween={20}>
+    <Swiper slidesPerView={1} spaceBetween={20}>
       <SwiperSlide>
         <GlobalPanel delay={100} sx={{ height: "100%", width: "100%" }}>
-          Collection
+          <ConlectData></ConlectData>
         </GlobalPanel>
-      </SwiperSlide>
-      <SwiperSlide>
-        <GlobalPanel delay={250} sx={{ height: "100%", width: "100%" }} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <GlobalPanel delay={400} sx={{ height: "100%", width: "100%" }} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <GlobalPanel delay={400} sx={{ height: "100%", width: "100%" }} />
       </SwiperSlide>
     </Swiper>
   );

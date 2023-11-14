@@ -2,7 +2,7 @@ import { Box, BoxProps, styled } from "@mui/material";
 import { useSpring, animated } from "@react-spring/web";
 import React, { memo } from "react";
 
-import { useGlobaltore } from "@/store/global";
+import { useGlobaltore } from "../../store/global";
 
 interface IProps extends BoxProps {
   delay?: number;

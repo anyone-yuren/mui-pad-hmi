@@ -51,6 +51,8 @@ const Drawer = styled(MuiDrawer, {
 }));
 const LeftNavBar = () => {
   const setActive = useGlobaltore((state) => state.setActive);
+  const { setDialogOpen, dialogOpen, setClickPoints, setActiveApp } =
+    useGlobaltore((state) => state);
   const theme = useTheme();
   return (
     <Drawer variant="permanent">
@@ -66,7 +68,20 @@ const LeftNavBar = () => {
         }}
       >
         <Box>
-          <ListItem key={"homeIcon"} disablePadding>
+          <ListItem
+            key={"homeIcon"}
+            disablePadding
+            onClick={(event) => {
+              setClickPoints({
+                x: event.clientX,
+                y: event.clientY,
+              });
+              setTimeout(() => {
+                setActiveApp("Dashboard");
+                !dialogOpen && setDialogOpen();
+              }, 200);
+            }}
+          >
             <ListItemButton
               sx={{
                 minHeight: 48,
@@ -84,7 +99,20 @@ const LeftNavBar = () => {
               </ListItemIcon>
             </ListItemButton>
           </ListItem>
-          <ListItem key={"homeIcon"} disablePadding>
+          <ListItem
+            key={"homeIcon"}
+            disablePadding
+            onClick={(event) => {
+              setClickPoints({
+                x: event.clientX,
+                y: event.clientY,
+              });
+              setTimeout(() => {
+                setActiveApp("IOSignal");
+                !dialogOpen && setDialogOpen();
+              }, 200);
+            }}
+          >
             <ListItemButton
               sx={{
                 minHeight: 48,
@@ -102,7 +130,20 @@ const LeftNavBar = () => {
               </ListItemIcon>
             </ListItemButton>
           </ListItem>
-          <ListItem key={"homeIcon"} disablePadding>
+          <ListItem
+            key={"homeIcon"}
+            disablePadding
+            onClick={(event) => {
+              setClickPoints({
+                x: event.clientX,
+                y: event.clientY,
+              });
+              setTimeout(() => {
+                setActiveApp("Cloud");
+                !dialogOpen && setDialogOpen();
+              }, 200);
+            }}
+          >
             <ListItemButton
               sx={{
                 minHeight: 48,

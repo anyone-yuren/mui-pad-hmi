@@ -3,6 +3,7 @@ import LeftNavBar from "./components/LeftNavBar";
 import SwiperContent from "./components/SwiperContent";
 import { Box, BoxProps, Paper, styled } from "@mui/material";
 import { useGlobaltore } from "./store/global";
+import PageLoading from "./components/PageLoading";
 
 import BgImg from "./assets/bg.png";
 import SlideDialog from "./components/SlideDialog";
@@ -64,8 +65,9 @@ export default function MiniDrawer() {
         <SlideBox open={active}>
           <SwiperContent />
         </SlideBox>
+
         <SlideDialog open={dialogOpen}>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<PageLoading />}>
             {Component && <Component />}
           </Suspense>
         </SlideDialog>

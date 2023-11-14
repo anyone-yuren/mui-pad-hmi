@@ -5,8 +5,10 @@ interface State {
   active: boolean;
   setActive: () => void;
   dialogOpen: boolean;
+  secondaryPage: boolean;
   activeApp: string;
   setDialogOpen: () => void;
+  setSecondaryPage: (open: boolean) => void;
   points: Record<string, number>;
   setClickPoints: (points: Record<string, number>) => void;
   apps: Record<string, string>[];
@@ -19,6 +21,7 @@ export const useGlobaltore = create<State>()(
     (set, get) => {
       return {
         active: true,
+        secondaryPage: true,
         dialogOpen: false,
         activeApp: "",
         points: { x: 0, y: 0 },
@@ -69,6 +72,9 @@ export const useGlobaltore = create<State>()(
         },
         setActiveApp: (activeApp: string) => {
           set({ activeApp });
+        },
+        setSecondaryPage: (open: boolean) => {
+          set({ secondaryPage: open });
         },
       };
     },

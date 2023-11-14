@@ -17,8 +17,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "@@/*": ["./src/.vit/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src", "./.eslintrc.cjs"],
