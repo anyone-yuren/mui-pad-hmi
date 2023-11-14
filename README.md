@@ -5,6 +5,8 @@
 <div align="center">
   
 项目使用react material ui以及react-spring/web构建，更多是动画层面设计，结构本身不复杂，目前阶段可做参考与学习，后续看需求变化，再进行nomorepo改造。
+<iframe width="100%" height="300px" src="//player.bilibili.com/player.html?bvid=BV1uz4y1A77D&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 - 预览地址：https://anyone-yuren.github.io/mui-pad-hmi/
 
