@@ -5,7 +5,10 @@
 <div align="center">
   
 项目使用react material ui以及react-spring/web构建，更多是动画层面设计，结构本身不复杂，目前阶段可做参考与学习，后续看需求变化，再进行nomorepo改造。
-<iframe width="100%" height="300px" src="//player.bilibili.com/player.html?bvid=BV1uz4y1A77D&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+![starter-antd-admin-crud-auth-mern-crud-auth](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5f30a22d75954c7bb0021323326df08d~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=1176&h=818&s=4244265&e=gif&f=160&b=140630)
+
+[![MIT](https://img.shields.io/github/license/iczer/vue-antd-admin)](https://github.com/iczer/vue-antd-admin/blob/master/LICENSE)
+
 </div>
 
 - 预览地址：https://anyone-yuren.github.io/mui-pad-hmi/
