@@ -1,29 +1,14 @@
-import {
-  Grid,
-  styled,
-  Paper,
-  CardHeader,
-  Avatar,
-  CardMedia,
-  CardContent,
-  Typography,
-  Skeleton,
-  IconButton,
-  Box,
-} from "@mui/material";
-import React, { useState, useEffect, useCallback, useMemo } from "react";
+import { Grid, styled, Paper, Typography, Box } from "@mui/material";
+import React, { useMemo } from "react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Card, List } from "antd";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import GlobalPanel from "../../GlobalPanel";
 import AboutLogoIcon from "../../SvgIcon/AboutLogoIcon";
 import ErrorInfoIcon from "../../SvgIcon/ErrorInfoIcon";
 import CommonChart from "./components/Chart";
 import SecondaryPage from "@/components/SecondaryPage";
 import { animated, useSpring } from "@react-spring/web";
+import GlobalPanel from "@/components/GlobalPanel";
 
 const StyleGrid = styled(animated(Grid))(({ open }) => ({
   opacity: open ? 1 : 0.4,
@@ -33,10 +18,8 @@ const StyleGrid = styled(animated(Grid))(({ open }) => ({
   transformOrigin: "left center",
   transition: "all 0.5s ease",
 }));
-const Settings = () => {
-  const [loading, setLoading] = React.useState(true);
-
-  const Item = styled(Paper)(({ theme }) => ({
+const About = () => {
+  const Item = styled(Box)(({ theme }) => ({
     background: "#445260",
     padding: "0px",
     textAlign: "center",
@@ -158,146 +141,154 @@ const Settings = () => {
         open={!startAnimate}
       >
         <Grid item xs={4} sx={{ height: "50%" }}>
-          <Item
-            sx={{
-              "&& .MuiSvgIcon-root": {
-                width: "240px!important",
-                height: "auto!important",
-              },
-            }}
-          >
-            <AboutLogoIcon></AboutLogoIcon>
-            <p
-              style={{
-                color: "#ffffff80",
-                marginTop: "20px",
+          <GlobalPanel delay={100} direction="up">
+            <Item
+              sx={{
+                "&& .MuiSvgIcon-root": {
+                  width: "240px!important",
+                  height: "auto!important",
+                },
               }}
             >
-              Multiway Robotics Co. Ltd.
-            </p>
-            <p
-              style={{
-                color: "#fff",
-                marginTop: "60px",
-              }}
-            >
-              序列号: MW7788802000666
-            </p>
-            <p
-              style={{
-                color: "#fff",
-                marginTop: "20px",
-              }}
-            >
-              出厂日期: 2023-12-25
-            </p>
-          </Item>
+              <AboutLogoIcon></AboutLogoIcon>
+              <p
+                style={{
+                  color: "#ffffff80",
+                  marginTop: "20px",
+                }}
+              >
+                Multiway Robotics Co. Ltd.
+              </p>
+              <p
+                style={{
+                  color: "#fff",
+                  marginTop: "60px",
+                }}
+              >
+                序列号: MW7788802000666
+              </p>
+              <p
+                style={{
+                  color: "#fff",
+                  marginTop: "20px",
+                }}
+              >
+                出厂日期: 2023-12-25
+              </p>
+            </Item>
+          </GlobalPanel>
         </Grid>
         <Grid item xs={8} sx={{ height: "50%" }}>
-          <Item
-            sx={{
-              flexDirection: "row",
-              flexWrap: "wrap",
-              alignContent: "stretch",
-              alignItems: "baseline",
-              padding: "20px",
-            }}
-          >
-            <p style={{ width: "100%", textAlign: "left" }}>信息统计及预警</p>
+          <GlobalPanel delay={250} direction="up">
+            <Item
+              sx={{
+                flexDirection: "row",
+                flexWrap: "wrap",
+                alignContent: "stretch",
+                alignItems: "baseline",
+                padding: "20px",
+              }}
+            >
+              <p style={{ width: "100%", textAlign: "left" }}>信息统计及预警</p>
 
-            <Grid
-              xs={4}
-              sx={{
-                position: "relative",
-              }}
-            >
-              {RenderOperationChart}
-              <PsBox>
-                <BottomTypography sx={{ fontSize: "20px", color: "#fff" }}>
-                  {"运行时间"}
-                </BottomTypography>
-                <Typography
-                  sx={{
-                    fontSize: "16px!important",
-                    color: "rgb(255 255 255)",
-                  }}
-                >
-                  Max {110} Hours
-                </Typography>
-              </PsBox>
-            </Grid>
-            <Grid
-              xs={4}
-              sx={{
-                position: "relative",
-              }}
-            >
-              <CommonChart max={365} value={15} />
-              <PsBox>
-                <BottomTypography sx={{ fontSize: "20px", color: "#fff" }}>
-                  {"系统天数"}
-                </BottomTypography>
-                <Typography
-                  sx={{
-                    fontSize: "16px!important",
-                    color: "rgb(255 255 255)",
-                  }}
-                >
-                  Max {365} Days
-                </Typography>
-              </PsBox>
-            </Grid>
-            <Grid
-              xs={4}
-              sx={{
-                position: "relative",
-              }}
-            >
-              <CommonChart max={5000} value={1111} />
-              <PsBox>
-                <BottomTypography sx={{ fontSize: "20px", color: "#fff" }}>
-                  {"公里数"}
-                </BottomTypography>
-                <Typography
-                  sx={{
-                    fontSize: "16px!important",
-                    color: "rgb(255 255 255)",
-                  }}
-                >
-                  Max {5000} Km
-                </Typography>
-              </PsBox>
-            </Grid>
-          </Item>
+              <Grid
+                xs={4}
+                sx={{
+                  position: "relative",
+                }}
+              >
+                {RenderOperationChart}
+                <PsBox>
+                  <BottomTypography sx={{ fontSize: "20px", color: "#fff" }}>
+                    {"运行时间"}
+                  </BottomTypography>
+                  <Typography
+                    sx={{
+                      fontSize: "16px!important",
+                      color: "rgb(255 255 255)",
+                    }}
+                  >
+                    Max {110} Hours
+                  </Typography>
+                </PsBox>
+              </Grid>
+              <Grid
+                xs={4}
+                sx={{
+                  position: "relative",
+                }}
+              >
+                <CommonChart max={365} value={15} />
+                <PsBox>
+                  <BottomTypography sx={{ fontSize: "20px", color: "#fff" }}>
+                    {"系统天数"}
+                  </BottomTypography>
+                  <Typography
+                    sx={{
+                      fontSize: "16px!important",
+                      color: "rgb(255 255 255)",
+                    }}
+                  >
+                    Max {365} Days
+                  </Typography>
+                </PsBox>
+              </Grid>
+              <Grid
+                xs={4}
+                sx={{
+                  position: "relative",
+                }}
+              >
+                <CommonChart max={5000} value={1111} />
+                <PsBox>
+                  <BottomTypography sx={{ fontSize: "20px", color: "#fff" }}>
+                    {"公里数"}
+                  </BottomTypography>
+                  <Typography
+                    sx={{
+                      fontSize: "16px!important",
+                      color: "rgb(255 255 255)",
+                    }}
+                  >
+                    Max {5000} Km
+                  </Typography>
+                </PsBox>
+              </Grid>
+            </Item>
+          </GlobalPanel>
         </Grid>
         <Grid item xs={8} sx={{ height: "50%" }}>
-          <Item
-            sx={{
-              padding: "20px",
-              display: "flex",
-              flexWrap: "wrap",
-              flexDirection: "row",
-            }}
-          >
-            {nodeListDom}
-          </Item>
+          <GlobalPanel delay={350} direction="up">
+            <Item
+              sx={{
+                padding: "20px",
+                display: "flex",
+                flexWrap: "wrap",
+                flexDirection: "row",
+              }}
+            >
+              {nodeListDom}
+            </Item>
+          </GlobalPanel>
         </Grid>
         <Grid item xs={4} sx={{ height: "50%" }}>
-          <Item
-            sx={{
-              "&& .MuiSvgIcon-root": {
-                width: "90px!important",
-                height: "auto!important",
-              },
-            }}
-            onClick={() => {
-              setOpen(true);
-              setStartAnimate(true);
-            }}
-          >
-            <ErrorInfoIcon></ErrorInfoIcon>
-            <p style={{ fontSize: "30px", marginTop: "24px" }}>异常查询</p>
-          </Item>
+          <GlobalPanel delay={450} direction="up">
+            <Item
+              sx={{
+                "&& .MuiSvgIcon-root": {
+                  width: "90px!important",
+                  height: "auto!important",
+                },
+              }}
+              onClick={() => {
+                setOpen(true);
+                setStartAnimate(true);
+              }}
+            >
+              <ErrorInfoIcon></ErrorInfoIcon>
+              <p style={{ fontSize: "30px", marginTop: "24px" }}>异常查询</p>
+            </Item>
+          </GlobalPanel>
         </Grid>
       </StyleGrid>
       <SecondaryPage
@@ -309,4 +300,4 @@ const Settings = () => {
   );
 };
 
-export default Settings;
+export default About;
