@@ -1,6 +1,6 @@
 import { memo, useEffect, useRef, useState } from "react";
 
-import { Box, Divider, Stack, styled } from "@mui/material";
+import { Box, Divider, Stack } from "@mui/material";
 import SpeedCtrlIcon from "@/components/SvgIcon/SpeedCtrlIcon";
 import Line from "./Line";
 import vehicleImg from "@/assets/velicle.png";
@@ -9,14 +9,6 @@ import { animated, useSpring } from "@react-spring/web";
 import AutoIcon from "@/components/SvgIcon/AutoIcon";
 import SemiAutoIcon from "@/components/SvgIcon/SemiAutoIcon";
 import HandMoveIcon from "@/components/SvgIcon/HandMoveIcon";
-
-const HexagonBox = styled(Box)(({ theme }) => ({
-  width: "58px !important",
-  height: "58px",
-  backgroundColor: "#4CAF50",
-  position: "relative",
-  clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-}));
 
 const VehicleStatus = memo(() => {
   const rotateZ = useRef(0);
@@ -63,16 +55,14 @@ const VehicleStatus = memo(() => {
             <h1 className="speed">
               0.234 <span>m/s</span>
             </h1>
-            <p>
-              <HexagonBox />
-            </p>
+            <p>车速</p>
           </div>
           <div className="speed-box">
             <h1 className="speed-control">
               <SpeedCtrlIcon sx={{ marginRight: "6px" }} />
               0.234 <span>m/s</span>
             </h1>
-            <p>11</p>
+            <p>车速</p>
           </div>
           <Divider sx={{ marginBlock: "20px" }} />
         </Box>

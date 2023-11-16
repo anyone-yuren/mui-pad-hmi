@@ -110,6 +110,11 @@ body {
   border-radius: 8px;
 }
 
+/* 反光板定义一个csshack */
+.swiper-wrapper-gap-20 > .swiper-wrapper {
+  gap: 20px;
+  position: relative;
+}
 /* 滚动条的样式优化 */
 ::-webkit-scrollbar-track-piece {
   -webkit-border-radius: 0;
@@ -193,6 +198,7 @@ body {
   flex-direction: row;
   margin-top: 25px;
   justify-content: space-between;
+  width: 100%;
 }
 .SwitchDiv .MuiSwitch-root {
   width: 110px;
@@ -218,4 +224,7 @@ body {
 .SwitchDiv .MuiSwitch-track {
   background-color: #d8d8d8 !important;
   opacity: 0.5 !important;
+}
+.ant-picker-dropdown {
+  z-index: 2050;
 }

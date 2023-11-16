@@ -117,10 +117,10 @@ function Icon({ isActive = false, fontSize = 88 }: IActionIconProps) {
                   height="28"
                   rx="2"
                   fillOpacity="0"
-                  stroke-opacity="1"
+                  strokeOpacity="1"
                   stroke="#FFFFFF"
                   fill="none"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
               </g>
               <g>

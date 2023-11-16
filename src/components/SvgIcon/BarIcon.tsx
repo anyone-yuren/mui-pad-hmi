@@ -24,7 +24,7 @@ function Icon({ isActive = false, fontSize = 58 }: IActionIconProps) {
               height="14"
               rx="2"
               fill="#FFFFFF"
-              fill-opacity="1"
+              fillOpacity="1"
             />
           </g>
           <g>
@@ -35,7 +35,7 @@ function Icon({ isActive = false, fontSize = 58 }: IActionIconProps) {
               height="14"
               rx="2"
               fill="#FFFFFF"
-              fill-opacity="1"
+              fillOpacity="1"
             />
           </g>
           <g>
@@ -46,7 +46,7 @@ function Icon({ isActive = false, fontSize = 58 }: IActionIconProps) {
               height="14"
               rx="2"
               fill="#FFFFFF"
-              fill-opacity="1"
+              fillOpacity="1"
             />
           </g>
           <g>
@@ -57,7 +57,7 @@ function Icon({ isActive = false, fontSize = 58 }: IActionIconProps) {
               height="14"
               rx="2"
               fill="#FFFFFF"
-              fill-opacity="1"
+              fillOpacity="1"
             />
           </g>
           <g>
@@ -68,7 +68,7 @@ function Icon({ isActive = false, fontSize = 58 }: IActionIconProps) {
               height="14"
               rx="2"
               fill="#FFFFFF"
-              fill-opacity="1"
+              fillOpacity="1"
             />
           </g>
           <g>
@@ -79,7 +79,7 @@ function Icon({ isActive = false, fontSize = 58 }: IActionIconProps) {
               height="14"
               rx="2"
               fill="#FFFFFF"
-              fill-opacity="1"
+              fillOpacity="1"
             />
           </g>
         </g>

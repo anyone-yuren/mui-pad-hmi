@@ -120,6 +120,100 @@ const Settings = () => {
         </GlobalPanel>
       </SwiperSlide>
       <SwiperSlide>
+        <GlobalPanel delay={100} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>行走参数 (双舵)</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : VehicleTravelingParametersData &&
+                VehicleTravelingParametersData.length ? (
+                VehicleTravelingParametersData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={250} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>定位参数 (堆高车)</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
         <GlobalPanel delay={250} sx={{ height: "100%", width: "100%" }}>
           <Card
             variant="outlined"
@@ -136,6 +230,382 @@ const Settings = () => {
                   />
                 ) : (
                   <p style={{ padding: 0, margin: 0 }}>定位参数 (托盘车)</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={250} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>定位参数 (前移式)</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={250} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>定位参数 (滚筒)</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={250} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>定位参数 (夹抱)</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={250} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>定位参数 (平衡重)</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={250} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>定位参数 (伸缩叉)</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={250} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>定位参数 (旋转顶升)</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={250} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>定位参数 (三向叉)</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={250} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>定位参数 (全向车前移)</p>
                 )
               }
             />
@@ -343,6 +813,429 @@ const Settings = () => {
                   />
                 ) : (
                   <p style={{ padding: 0, margin: 0 }}>FTP参数</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={700} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>叉臂逻辑参数</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={700} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>天眼视觉参数</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={700} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>扫码参数</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={700} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>驱动器参数</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={700} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>充电参数</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={700} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>定位参数</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={700} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>反光板参数</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide>
+        <GlobalPanel delay={700} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>安全参数</p>
+                )
+              }
+            />
+
+            <CardContent sx={{ padding: 0, paddingTop: "14px" }}>
+              {loading ? (
+                <React.Fragment>
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    style={{ marginBottom: 6 }}
+                  />
+                  <Skeleton animation="wave" height={10} width="80%" />
+                </React.Fragment>
+              ) : PositioningParameterData &&
+                PositioningParameterData.length ? (
+                PositioningParameterData.map((item) => (
+                  <div>
+                    <div className="numberLable">{item.name}</div>
+                    <div className="numberInput">
+                      <div className="number">{item.value}</div>
+                      <EditIcon isActive></EditIcon>
+                    </div>
+                  </div>
+                ))
+              ) : null}
+            </CardContent>
+          </Card>
+        </GlobalPanel>
+      </SwiperSlide>
+      <SwiperSlide style={{}}>
+        <GlobalPanel delay={700} sx={{ height: "100%", width: "100%" }}>
+          <Card
+            variant="outlined"
+            sx={{ height: "100%", background: "transparent", border: 0 }}
+          >
+            <CardHeader
+              title={
+                loading ? (
+                  <Skeleton
+                    animation="wave"
+                    height={10}
+                    width="80%"
+                    style={{ marginBottom: 6 }}
+                  />
+                ) : (
+                  <p style={{ padding: 0, margin: 0 }}>视觉参数</p>
                 )
               }
             />

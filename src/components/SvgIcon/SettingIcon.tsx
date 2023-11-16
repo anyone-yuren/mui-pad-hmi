@@ -23,8 +23,8 @@ function Icon({ isActive = false, fontSize = 180 }: IActionIconProps) {
             y2="1"
             id="master_svg0_254_0997"
           >
-            <stop offset="0%" stop-color="#00DE6B" stop-opacity="1" />
-            <stop offset="100%" stop-color="#009C66" stop-opacity="1" />
+            <stop offset="0%" stopColor="#00DE6B" stopOpacity="1" />
+            <stop offset="100%" stopColor="#009C66" stopOpacity="1" />
           </linearGradient>
         </defs>
         <g>
