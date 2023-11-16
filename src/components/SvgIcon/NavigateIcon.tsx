@@ -25,13 +25,13 @@ function Icon({ isActive = false, fontSize = 180 }: IActionIconProps) {
           >
             <stop
               offset="38.57142925262451%"
-              stop-color="#00D1D1"
-              stop-opacity="1"
+              stopColor="#00D1D1"
+              stopOpacity="1"
             />
             <stop
               offset="77.85714268684387%"
-              stop-color="#0095FF"
-              stop-opacity="1"
+              stopColor="#0095FF"
+              stopOpacity="1"
             />
           </linearGradient>
         </defs>

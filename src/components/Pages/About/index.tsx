@@ -1,15 +1,29 @@
-import { Grid, styled, Paper, Typography, Box } from "@mui/material";
-import React, { useMemo } from "react";
-
+import {
+  Grid,
+  styled,
+  Paper,
+  Typography,
+  Box,
+  Button,
+  List,
+  ListItem,
+  ListItemText,
+} from "@mui/material";
+import { DatePicker, Radio, Space, ConfigProvider } from "antd";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
+import locale from "antd/locale/zh_CN";
 import "swiper/css";
 import "swiper/css/pagination";
 import AboutLogoIcon from "../../SvgIcon/AboutLogoIcon";
 import ErrorInfoIcon from "../../SvgIcon/ErrorInfoIcon";
+import FirstmaintenanceIcon from "../../SvgIcon/FirstmaintenanceIcon";
+import AboutStaterIcon from "../../SvgIcon/AboutStaterIcon";
 import CommonChart from "./components/Chart";
 import SecondaryPage from "@/components/SecondaryPage";
 import { animated, useSpring } from "@react-spring/web";
 import GlobalPanel from "@/components/GlobalPanel";
-
+import EmptyBox from "@/components/Empty";
+const { RangePicker } = DatePicker;
 const StyleGrid = styled(animated(Grid))(({ open }) => ({
   opacity: open ? 1 : 0.4,
   transform: open
@@ -21,7 +35,7 @@ const StyleGrid = styled(animated(Grid))(({ open }) => ({
 const About = () => {
   const Item = styled(Box)(({ theme }) => ({
     background: "#445260",
-    padding: "0px",
+    padding: "0px!important",
     textAlign: "center",
     color: "#fff",
     height: "100%",
@@ -47,6 +61,82 @@ const About = () => {
   const BottomTypography = styled(Typography)(({ theme }) => ({
     color: "#3D3D3D",
   }));
+  const ItemTitle = styled("div")(({ theme }) => ({
+    fontSize: "30px",
+    textAlign: "left",
+    margin: "0px",
+    color: "#000",
+  }));
+  const [errData, setErrData] = useState([
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+    {
+      errCode: "RX1093841",
+      errStr: "异常问题描述内容详情放这里，这里能写很多 字，还可以换行。",
+    },
+  ]);
   const data = [
     {
       title: "车辆编号",
@@ -74,11 +164,21 @@ const About = () => {
     },
     {
       title: "首次保养",
-      states: "2",
+      states:
+        "1" == 1 ? (
+          <FirstmaintenanceIcon isActive></FirstmaintenanceIcon>
+        ) : (
+          <FirstmaintenanceIcon isActive></FirstmaintenanceIcon>
+        ),
     },
     {
       title: "当前状态",
-      states: "1",
+      states:
+        "1" == 0 ? (
+          <AboutStaterIcon></AboutStaterIcon>
+        ) : (
+          <AboutStaterIcon isActive></AboutStaterIcon>
+        ),
     },
   ];
   const nodeListDom = useMemo(() => {
@@ -132,6 +232,50 @@ const About = () => {
   const RenderOperationChart = useMemo(() => {
     return <CommonChart max={110} value={11} />;
   }, []);
+  const mapListDom = useMemo(() => {
+    return errData?.map((item: Array, index: number) => {
+      return (
+        <ListItem
+          sx={{
+            padding: 0,
+            borderTop: "1px solid rgba(255, 255, 255, 0.2)",
+          }}
+        >
+          <ListItemText
+            sx={{
+              margin: "10px 0",
+              ".MuiListItemText-primary": {
+                fontSize: "18px",
+              },
+              ".MuiListItemText-secondary": {
+                fontSize: "18px",
+                color: "rgb(255 255 255 / 50%)",
+              },
+            }}
+            primary={"错误码：" + item.errCode}
+            secondary={item.errStr}
+          />
+        </ListItem>
+      );
+    });
+  }, []);
+  const ErrList = useMemo(() => {
+    return (
+      <>
+        <List
+          sx={{
+            width: "100%",
+            bgcolor: "transparent",
+            overflow: "auto",
+            height: "100%",
+            padding: 0,
+          }}
+        >
+          {mapListDom}
+        </List>
+      </>
+    );
+  }, [errData]);
   return (
     <>
       <StyleGrid
@@ -295,7 +439,72 @@ const About = () => {
         open={open}
         setOpen={setOpen}
         startAnimate={setStartAnimate}
-      ></SecondaryPage>
+      >
+        <Item
+          sx={{
+            margin: "20px 0",
+            width: "100%",
+            padding: "20px!important",
+            height: "calc(100% - 60px)",
+            justifyContent: "flex-start",
+          }}
+        >
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              flexWrap: "nowrap",
+              borderBottom: "1px solid rgba(0, 0, 0, 0.2)",
+            }}
+          >
+            <ItemTitle>异常查询</ItemTitle>
+            <ConfigProvider locale={locale}>
+              <RangePicker
+                style={{
+                  height: "70px",
+                  borderRadius: "5px",
+                  background: "rgb(216 216 216 / 20%)",
+                  border: "none",
+                }}
+                size={"large"}
+                onChange={(value, mode) => {
+                  console.log("onChange", value, mode);
+                }}
+              />
+            </ConfigProvider>
+            <Button
+              variant="开始查询"
+              sx={{
+                backgroundColor: "rgba(216, 216, 216, 0.2)",
+                boxSizing: "border-box",
+                border: "2px solid #00D1D1",
+                color: "#00D1D1",
+                fontSize: "30px",
+              }}
+            >
+              开始查询
+            </Button>
+          </div>
+
+          <div
+          // style={{
+          //   height: window.innerHeight - 182 - 65,
+          // }}
+          >
+            {errData.length > 0 ? (
+              ErrList
+            ) : (
+              <EmptyBox
+                title="没有异常数据"
+                backgroundColor="transparent"
+              ></EmptyBox>
+            )}
+          </div>
+        </Item>
+      </SecondaryPage>
     </>
   );
 };

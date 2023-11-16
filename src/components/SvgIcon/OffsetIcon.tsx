@@ -24,8 +24,8 @@ function Icon({ isActive = false, fontSize = 180 }: IActionIconProps) {
             id="master_svg0_276_7405"
             gradientTransform="translate(90 90.00001525878906) rotate(45.000004857022994) scale(127.27923140317223 127.27920982398763)"
           >
-            <stop offset="0%" stop-color="#EAFF00" stop-opacity="1" />
-            <stop offset="100%" stop-color="#C7B300" stop-opacity="1" />
+            <stop offset="0%" stopColor="#EAFF00" stopOpacity="1" />
+            <stop offset="100%" stopColor="#C7B300" stopOpacity="1" />
           </radialGradient>
         </defs>
         <g>

@@ -17,8 +17,8 @@ function Icon({ isActive = false, fontSize = 180 }: IActionIconProps) {
       >
         <defs>
           <linearGradient x1="1" y1="0" x2="0" y2="1" id="master_svg0_254_3300">
-            <stop offset="0%" stop-color="#FFA100" stop-opacity="1" />
-            <stop offset="100%" stop-color="#FF5900" stop-opacity="1" />
+            <stop offset="0%" stopColor="#FFA100" stopOpacity="1" />
+            <stop offset="100%" stopColor="#FF5900" stopOpacity="1" />
           </linearGradient>
         </defs>
         <g>
