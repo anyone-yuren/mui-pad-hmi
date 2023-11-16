@@ -11,7 +11,7 @@ import SemiAutoIcon from "@/components/SvgIcon/SemiAutoIcon";
 import HandMoveIcon from "@/components/SvgIcon/HandMoveIcon";
 
 const HexagonBox = styled(Box)(({ theme }) => ({
-  width: "100px",
+  width: "58px !important",
   height: "58px",
   backgroundColor: "#4CAF50",
   position: "relative",
@@ -72,7 +72,7 @@ const VehicleStatus = memo(() => {
               <SpeedCtrlIcon sx={{ marginRight: "6px" }} />
               0.234 <span>m/s</span>
             </h1>
-            <p>车速</p>
+            <p>11</p>
           </div>
           <Divider sx={{ marginBlock: "20px" }} />
         </Box>
