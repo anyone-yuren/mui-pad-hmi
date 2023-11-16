@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 
 import GlobalPanel from "../../GlobalPanel";
 import MenuBar from "./menuBar";
-import PopupView from "./PopupView";
+import PopupView from "./popupView";
 import PopupAction from "./popupAction";
 import ReflectorCanvas from "./ReflectorCanvas";
 import { useMapStore, TActivePanel } from "../../../store/map";
