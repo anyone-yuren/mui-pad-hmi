@@ -42,3 +42,7 @@ $ yarn dev
 $ pnpm i
 $ pnpm dev
 ```
+
+## 新功能迭代
+
+- [x] 首屏动画交互
