@@ -1,0 +1,1 @@
+import{s as o,B as s}from"./index-0c00848c.js";const t=o(s)(({theme:e})=>({display:"flex",height:"100%"})),l=o(t)(({theme:e})=>({flexDirection:"column"})),i=o(t)(({theme:e})=>({flexDirection:"row"}));export{l as C,i as R};
