@@ -1,4 +1,4 @@
-import { styled, Box } from "@mui/material";
+import { styled, Box, Stack } from "@mui/material";
 import { keyframes } from "@emotion/react";
 import { animated } from "@react-spring/web";
 export const StyleBox = styled(Box)(({ theme }) => ({
@@ -129,4 +129,85 @@ export const RadioBox = styled(Box)<RadioBoxProps>(({ theme, active }) => ({
       backgroundColor: "rgba(255, 255, 255, 1)",
     },
   },
+}));
+type LoadingProp = {
+  width?: string;
+};
+
+export const ExecutingIcon = styled("div")<LoadingProp>(
+  ({ theme, width = "10px" }) => ({
+    width: width,
+    aspectRatio: 1,
+    borderRadius: "50%",
+    background: "#fff",
+    display: "grid",
+    animation: `l22_0 2s infinite linear`,
+    "&:before, &:after": {
+      content: "''",
+      gridArea: "1/1",
+      margin: "15%",
+      borderRadius: "50%",
+      background: "inherit",
+      transform: "rotate(0deg) translate(150%)",
+      animation: `l22 1s infinite`,
+    },
+    "&:after": {
+      animationDelay: "-.5s",
+    },
+    "@keyframes l22": {
+      "100%": {
+        transform: "rotate(1turn) translate(150%)",
+      },
+    },
+    "@keyframes l22_0": {
+      "100%": {
+        transform: "rotate(1turn)",
+      },
+    },
+  })
+);
+export const LoadingIcon = styled("div")<LoadingProp>(
+  ({ theme, width = "30px" }) => ({
+    width: width,
+    aspectRatio: 1,
+    display: "grid",
+    borderRadius: "50%",
+    background:
+      "linear-gradient(0deg ,rgb(255 255 255/50%) 30%,#0000 0 70%,rgb(255 255 255/100%) 0) 50%/8% 100%,linear-gradient(90deg,rgb(255 255 255/25%) 30%,#0000 0 70%,rgb(255 255 255/75% ) 0) 50%/100% 8%",
+    backgroundRepeat: "no-repeat",
+    animation: "l23 1s infinite steps(12)",
+    "@keyframes l23": {
+      "100%": {
+        transform: "rotate(1turn)",
+      },
+    },
+    "&:before, &:after": {
+      content: "''",
+      gridArea: "1/1",
+      borderRadius: "50%",
+      background: "inherit",
+      opacity: 0.915,
+      transform: "rotate(30deg)",
+    },
+    "&:after": {
+      opacity: 0.83,
+      transform: "rotate(60deg)",
+    },
+  })
+);
+
+export const AlignStack = styled(Stack)(({ theme }) => ({
+  textAlign: "center",
+  justifyContent: "space-around",
+  "& .MuiTypography-root": {
+    flex: 1,
+    display: "flex",
+    justifyContent: "space-evenly",
+  },
+}));
+
+export const ListStack = styled(AlignStack)(({ theme }) => ({
+  backgroundColor: "#D8D8D820",
+  borderRadius: "5px",
+  marginBottom: "10px",
 }));
