@@ -9,6 +9,8 @@ import { animated, useSpring } from "@react-spring/web";
 import AutoIcon from "@/components/SvgIcon/AutoIcon";
 import SemiAutoIcon from "@/components/SvgIcon/SemiAutoIcon";
 import HandMoveIcon from "@/components/SvgIcon/HandMoveIcon";
+import WarmingIcon from "@/components/SvgIcon/WarmingIcon";
+import ErrorIcon from "@/components/SvgIcon/ErrorIcon";
 
 const VehicleStatus = memo(() => {
   const rotateZ = useRef(0);
@@ -55,14 +57,18 @@ const VehicleStatus = memo(() => {
             <h1 className="speed">
               0.234 <span>m/s</span>
             </h1>
-            <p>车速</p>
+            <p style={{ color: "#FFA200" }}>
+              <WarmingIcon />
+            </p>
           </div>
           <div className="speed-box">
             <h1 className="speed-control">
               <SpeedCtrlIcon sx={{ marginRight: "6px" }} />
               0.234 <span>m/s</span>
             </h1>
-            <p>车速</p>
+            <p style={{ color: "red" }}>
+              <ErrorIcon />
+            </p>
           </div>
           <Divider sx={{ marginBlock: "20px" }} />
         </Box>
